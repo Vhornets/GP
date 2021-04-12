@@ -1,0 +1,43 @@
+.l-compressed-bales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.l-compressed-bales__text, .l-compressed-bales__images {
+    @include gutters;
+
+    width: 100%;
+    position: relative;
+
+    @media(min-width: $screen-sm) {
+        width: 50%;
+    }
+}
+
+.l-compressed-bales__text {
+    background-color: $color-primary;
+    padding: 3rem;
+    z-index: 1;
+
+    @media(min-width: $screen-md) {
+        padding: 11rem 5rem 11rem 17rem;
+    }
+}
+
+.l-compressed-bales__images {
+    z-index: 0;
+
+    @media(min-width: $screen-sm) {
+    }
+}
+
+[dir='rtl'] {
+    .l-compressed-bales__images {
+        @media(min-width: $screen-sm) {
+            margin-left: initial;
+            margin-right: initial;
+        }
+    }
+}

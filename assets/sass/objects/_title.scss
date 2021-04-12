@@ -1,0 +1,60 @@
+.o-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    
+    span {
+        display: block;
+        color: $color-green;
+    }
+
+    @media(min-width: $screen-md) {
+        font-size: 6.5rem;
+        letter-spacing: .122rem;
+        line-height: 7.0rem;
+        margin-bottom: 4rem;
+    }
+}
+ 
+.o-title--smaller {
+    @media(min-width: $screen-md) {
+        font-size: 6rem;
+    }
+}
+ 
+.o-title--small {
+    text-transform: none;
+    font-size: 5.1rem;
+    
+    @media(min-width: $screen-md) {
+        font-size: 4.8rem;
+        line-height: 5rem;
+    }
+}
+ 
+.o-title--medium {
+    font-size: 2.5rem;
+
+    @media(min-width: $screen-md) {
+        font-size: 3.5rem;
+    }
+}
+
+.o-title--inline {
+    span {
+        display: inline;
+    }
+}
+
+.o-title--has-bottom-line {
+    &:after {
+        content: '';
+        display: block;
+        width: 13.5rem;
+        height: 2px;
+        border-radius: 2px;
+        background-color: $color-yellow;
+        margin-top: 2.5rem;
+    }
+}

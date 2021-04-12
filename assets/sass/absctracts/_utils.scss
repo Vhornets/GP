@@ -1,0 +1,43 @@
+.clearfix {
+    @include clearfix;
+}
+
+.icon {
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+
+    .o-title {
+        &:after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.text-muted {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #3D3D3D;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @media(min-width: $screen-md) {
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+}
+
+.hidden-xs {
+    @media(max-width: $screen-sm) {
+        display: none;
+    }
+}
+
+.image-rounded {
+    border-radius: 24px;
+}

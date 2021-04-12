@@ -1,0 +1,47 @@
+.c-language-switcher {
+    @include list-reset;
+
+    margin-top: 1.5rem;
+
+    li {
+        display: inline-block;
+        font-size: 0;
+
+        a, &:after {
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: 0.39px;
+            text-transform: uppercase;
+            transition: 0.3s all;
+        }
+
+        &:after {
+            content: '/';
+            margin-left: .5rem;
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+
+        &.current-lang, &:hover {
+            a {
+                color: #00a859;
+            }
+        }
+    }
+}
+
+[dir='rtl'] {
+    .c-language-switcher {
+        li {
+            &:after {
+                margin-left: initial;
+                margin-right: .3rem;
+            }
+        }
+    }
+}

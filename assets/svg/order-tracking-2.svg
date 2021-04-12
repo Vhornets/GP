@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__Component_9_2" width="41.981" height="30.087" data-name="Component 9 – 2" viewBox="0 0 41.981 30.087">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="prefix__Group_81" data-name="Group 81" transform="translate(0 2.799)">
+        <g id="prefix__Group_80" data-name="Group 80">
+            <path id="prefix__Path_205" d="M563.7 570.73l-6.3-9.794a.7.7 0 0 0-.588-.322h-7v-4.2a.7.7 0 0 0-.7-.7h-26.587a.7.7 0 0 0-.7.7v22.39a.7.7 0 0 0 .7.7h4.957a4.2 4.2 0 0 0 8.279 0h15.509a4.2 4.2 0 0 0 8.28 0h3.557a.7.7 0 0 0 .7-.7v-7.7a.708.708 0 0 0-.107-.374zm-31.9 10.87a2.8 2.8 0 1 1 2.61-2.61 2.8 2.8 0 0 1-2.61 2.61zm16.611-23.083h-23.325a.461.461 0 0 0-.462.461v.477a.462.462 0 0 0 .462.462h23.328v15.392H537a.486.486 0 0 0-.487.485v.429a.486.486 0 0 0 .487.485h11.409v1.4h-12.648a4.2 4.2 0 0 0-8.278 0h-4.257v-1.4h2.993a.5.5 0 0 0 .5-.5v-.391a.5.5 0 0 0-.5-.5h-2.993v-18.202h25.189zm9.794 6.3v-.028l3.166 4.925h-8.762v-4.9zm-2.98 16.783a2.8 2.8 0 1 1 2.978-2.977 2.81 2.81 0 0 1-2.978 2.977zm7.182-6.291h-1.562a.538.538 0 0 0-.538.538v.324a.537.537 0 0 0 .538.538h1.562v1.4h-2.857a4.2 4.2 0 0 0-8.279 0h-1.458v-16.094h6.615l.9 1.4h-5.416a.7.7 0 0 0-.7.7v6.3a.7.7 0 0 0 .7.7h10.363l.132.206z" class="prefix__cls-1" data-name="Path 205" transform="translate(-521.826 -555.717)"/>
+        </g>
+    </g>
+    <g id="prefix__Group_83" data-name="Group 83" transform="translate(9.095 25.188)">
+        <g id="prefix__Group_82" data-name="Group 82">
+            <rect id="prefix__Rectangle_9" width="1.4" height="1.4" class="prefix__cls-1" data-name="Rectangle 9" rx=".63"/>
+        </g>
+    </g>
+    <g id="prefix__Group_85" data-name="Group 85" transform="translate(32.885 25.188)">
+        <g id="prefix__Group_84" data-name="Group 84">
+            <rect id="prefix__Rectangle_10" width="1.399" height="1.4" class="prefix__cls-1" data-name="Rectangle 10" rx=".63"/>
+        </g>
+    </g>
+    <g id="prefix__Group_87" data-name="Group 87" transform="translate(2.798)">
+        <g id="prefix__Group_86" data-name="Group 86">
+            <rect id="prefix__Rectangle_11" width="9.796" height="1.4" class="prefix__cls-1" data-name="Rectangle 11" rx=".523"/>
+        </g>
+    </g>
+    <g id="prefix__Group_89" data-name="Group 89">
+        <g id="prefix__Group_88" data-name="Group 88">
+            <rect id="prefix__Rectangle_12" width="1.399" height="1.399" class="prefix__cls-1" data-name="Rectangle 12" rx=".446"/>
+        </g>
+    </g>
+</svg>

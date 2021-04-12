@@ -1,0 +1,26 @@
+.l-vacancies {
+    width: 100%;
+    max-width: 110.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.l-vacancies__item {
+    @include gutters;
+
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @media(min-width: $screen-xs) {
+        width: percentage(6/12);
+    }
+
+    @media(min-width: $screen-sm) {
+        width: percentage(4/12);
+    }
+}

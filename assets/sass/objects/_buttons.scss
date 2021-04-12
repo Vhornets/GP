@@ -1,0 +1,95 @@
+.o-button-default {
+    @include button;
+}
+
+.o-button-default--green {
+    color: $color-green;
+    border-color: $color-green;
+
+    &:hover {
+        color: $color-yellow;
+    }
+}
+
+.o-button-default--has-arrow, .o-button-default--has-arrow-green {
+    position: relative;
+    padding-right: 35px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        display: block;
+    }
+}
+
+.o-button-plain {
+    @include button($bg: $color-green, $color: $color-secondary, $border: 1px solid $color-green, $padding: 10px 11px 8px 11px, $font-size: 16px);
+
+    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+    min-width: 16rem;
+
+    &:hover {
+        background-color: #c1c1c1;
+        border-color: #c1c1c1;
+    }
+
+    @media(min-width: $screen-md) {
+        min-width: 20.1rem;
+    }
+}
+
+.o-button-plain--white {
+    background-color:transparent;
+    border-color:#fff;
+
+    &:hover {
+        background-color: #fff;
+        border-color: #fff;
+        color: $color-green;
+    }
+}
+
+.o-button-plain--white-active {
+    background-color: #fff;
+    border-color: #fff;
+    color: $color-green;
+
+    &:hover {
+        opacity: .8;
+    }    
+}
+
+.o-button-plain--gray {
+    background-color: #848484;
+    border-color: #848484;
+}
+
+[dir='rtl'] {
+    .o-button-default--has-arrow, .o-button-default--has-arrow-green {
+        padding-right: 10px;
+        padding-left: 35px;
+
+        &:after {
+            right: initial;
+            left: 10px;
+            transform: translateY(-50%) rotate(-180deg);
+        }
+    }
+}
+
+.o-button-default--has-arrow {
+    &:after {
+        @extend .svg-arrow-button-yellow;
+        @extend .svg-arrow-button-yellow-dims;
+    }
+}
+
+.o-button-default--has-arrow-green {
+    &:after {
+        @extend .svg-arrow-button;
+        @extend .svg-arrow-button-dims;
+    }
+}

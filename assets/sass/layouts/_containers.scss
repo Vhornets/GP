@@ -1,0 +1,43 @@
+.l-containers {
+    @include container;
+    @include gutters;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.l-containers__icon, .l-containers__text, .l-containers__image {
+    width: 100%;
+}
+
+.l-containers__icon {
+    @media(min-width: $screen-md) {
+        padding-top: 1.2rem;
+        width: percentage(1.2/12);
+    }
+}
+
+.l-containers__text {
+    @media(min-width: $screen-md) {
+        width: percentage(4.8/12);
+    }
+}
+
+.l-containers__image {
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    @media(min-width: $screen-md) {
+        width: percentage(6/12);
+        padding-top: 3rem;
+
+        img {
+            width: 114%;
+            margin-left: 10%;
+            max-width: none;
+        }
+    }
+}

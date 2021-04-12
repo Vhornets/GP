@@ -1,0 +1,15 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/remodal/src/remodal";
+@import "../../node_modules/remodal/src/remodal-default-theme"; 
+
+@import 'absctracts/variables';
+@import 'absctracts/mixins';
+@import 'absctracts/utils'; 
+@import 'absctracts/animations'; 
+
+@import 'base/base'; 
+@import 'base/fonts';
+
+@import 'components';
+@import 'layouts';  

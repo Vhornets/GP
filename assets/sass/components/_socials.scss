@@ -1,0 +1,39 @@
+.c-socials {
+    @include list-reset;
+
+    font-size: 0;
+    display: inline-block;
+    vertical-align: middle;
+
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 3px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            display: block;
+            transition: .3s all;
+
+            &:hover {
+            }
+        }
+
+        svg {
+            path {
+                transition: .3s all;
+            }
+        }
+
+        @media(min-width: $screen-md) {
+            margin: 0 5px;
+        }
+    }
+}

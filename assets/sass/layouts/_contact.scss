@@ -1,0 +1,42 @@
+.l-contact {
+    @include container;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-right: 0;
+    position: relative;
+    z-index: 1;
+
+    @media(min-width: $screen-md) {
+        @include gutters;
+        
+        padding-right: 0;
+    }
+}
+
+.l-contact__text, .l-contact__form {
+    @include gutters;
+    
+    width: 100%;
+}
+
+.l-contact__text {
+    margin-bottom: 5rem;
+
+    @media(min-width: $screen-md) {
+        width: percentage(4.5/12);
+        padding-top: 5rem;
+        margin-bottom: 0;
+
+        .c-list-contacts {
+            margin-left: percentage(5.2/12);
+        }
+    }
+}
+
+.l-contact__form {
+    @media(min-width: $screen-md) {
+        width: percentage(4.5/12);
+    }
+}

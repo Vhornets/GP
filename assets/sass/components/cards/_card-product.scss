@@ -1,0 +1,33 @@
+.c-card-product {
+    display: flex;
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 42rem;
+    position: relative;
+
+    &:hover {
+        .c-card-product__content {
+            opacity: 1;
+        }
+    }
+}
+
+.c-card-product__content {
+    @include absolute-center;
+
+    width: 92%;
+    height: 92%;
+    background-color: fade_out($color-yellow, .45);
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: .068rem;
+    text-transform: uppercase;    
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    transition: .3s all;
+    opacity: 0;
+}

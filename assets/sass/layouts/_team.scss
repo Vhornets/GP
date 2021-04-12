@@ -1,0 +1,73 @@
+.l-team {
+    @include container;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.l-team__head {
+    width: percentage(10/12);
+    margin: auto;
+
+    @media(min-width: $screen-md) {
+        width: percentage(8/12);
+    }
+}
+
+.l-team-members {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+    
+    &:after {
+        content: '';
+        flex: auto;
+    }
+
+    @media(min-width: $screen-md) {
+        margin-top: 7rem;
+    }
+
+    @media(min-width: $screen-lg) {
+        width: percentage(10/12);
+    }
+}
+
+.l-team-members__item {
+    @include gutters;
+
+    width: percentage(6/12);
+    margin-bottom: 4rem;
+
+    &:nth-child(1), &:nth-child(6), &:nth-child(11), &:nth-child(16), &:nth-child(21), &:nth-child(26), &:nth-child(31) { 
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: -2rem auto 0;
+            width: 46rem;
+            height: 2px;
+            background: $color-yellow;
+            display: none;
+        }
+    }
+
+    @media(min-width: 600px) {
+        width: percentage(2.5/10);
+    }
+
+    @media(min-width: $screen-sm) {
+        width: percentage(2/10);
+    }
+
+    @media(min-width: $screen-lg) {
+        &:before {
+            display: block !important;
+        }
+    }
+}

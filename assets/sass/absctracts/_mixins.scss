@@ -1,0 +1,114 @@
+@mixin container($width: 117rem) {
+    width: 100%;
+    max-width: $width;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    @media(min-width: $screen-xxl) {
+        max-width: 130rem;
+    }
+}
+
+@mixin gutters($gutter: 2rem) {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media(min-width: $screen-md) {
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@mixin button(
+    $padding: 6px 11px 6px 11px,
+    $font-size: 1.2rem,
+    $font-weight: 400,
+    $color: #fff,
+    $color-hover: #fff,
+    $text-transform: uppercase,
+    $bg: transparent,
+    $bg-hover: $bg,
+    $border: 2px solid #fff,
+    $border-radius: 26px
+) {
+        transition: 0.5s all;
+        display: inline-block;
+        font-size: $font-size;
+        font-weight: $font-weight;
+        color: $color;
+        padding: $padding;
+        text-decoration: none;
+        text-transform: $text-transform;
+        text-align: center;
+        border-radius: $border-radius;
+        line-height: 1.4;
+        position: relative;
+        background: $bg;
+        border: $border;
+        box-sizing: border-box;
+        border-radius: $border-radius;
+        letter-spacing: 0.03em;
+
+        &:hover, &.is-active {
+            background: $bg-hover;
+            color: $color-hover;
+        }
+
+        &:active, &:focus {
+            outline: none;
+            opacity: .8;
+        }
+
+        span {
+            position: relative;
+        }
+}
+
+@mixin placeholder($color: #000, $weight: 400) {
+    ::-webkit-input-placeholder {
+        color: $color;
+        font-weight: $weight;
+        opacity: 1 !important;
+        transition: .3s all;
+    }
+
+    :-moz-placeholder {
+        color: $color;
+        font-weight: $weight;
+        opacity: 1 !important;
+        transition: .3s all;
+    }
+
+    :-ms-input-placeholder {
+        color: $color;
+        font-weight: $weight;
+        opacity: 1 !important;
+        transition: .3s all;
+    }
+}
+
+@mixin list-reset() {
+    list-style: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}

@@ -1,0 +1,433 @@
+.c-form {
+    @include placeholder($color: #fff);
+
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.c-form--dark {
+    @include placeholder($color: #979797);
+
+    .c-form__response {
+        background: fade_out($color-secondary, .2);
+    }
+
+    .c-form__control, .c-form__response, .c-form__submit, .c-file-upload__label {
+        color: #979797;
+    }
+
+    .c-form__control, .c-form__submit {
+        border-color: #979797;
+    }
+
+    .c-form__submit {
+        @media(min-width: $screen-md) {
+            padding-right: 3rem;
+        }
+    }
+}
+
+.c-form__response {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: fade_out($color-primary, .2);
+    color: #fff;
+    display: flex;
+    font-size: 2.4rem;
+    text-align: center;
+    align-items: center;
+    transition: .5s all;
+
+    &.is-active {
+        left: 0;
+    }
+}
+
+.c-form__response-text {
+    padding: 3rem;
+    width: 100%;
+}
+
+.c-form__title {
+  font-size: 3.6rem;
+  font-weight: 300;
+  line-height: 1.22;
+  letter-spacing: 1.01px;
+  color: $color-primary;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+
+  span {
+    color: $color-green;
+    display: block;
+    font-weight: 900;
+  }
+}
+
+.c-form__group {
+    margin-bottom: 5rem;
+
+    .c-dropdown {
+        &:after {
+            top: 1.2rem;
+        }
+
+        .sub-menu {
+            width: 100%;
+
+            li {
+                a {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.c-form__group--submit {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.c-form__control {
+    height: 60px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+    padding: 0 0 2.8rem 0;
+    font-size: 2.0rem;
+    letter-spacing: .061rem;
+    color: #fff;
+    transition: .3s all;
+    position: relative;
+
+    &:focus, &:hover {
+        outline: none;
+    }
+
+    &:hover {
+    }
+
+    &:focus {
+    }
+}
+
+.c-form__submit {
+    @media(min-width: $screen-md) {
+        padding-right: 7rem;
+    }
+}
+
+input:hover::-webkit-input-placeholder, input:focus::-webkit-input-placeholder {
+}
+
+textarea.c-form__control {
+    min-height: 160px;
+    padding-top: 22px;
+}
+
+select.c-form__control {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    background-image: url('../../assets/svg/dropdown-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right .1rem top 35%, 0 0;
+    background-size: 1.5rem auto, 100%;    
+
+    &::-ms-expand {
+        display: none;
+    }   
+     
+    option {
+        color: $color-primary;
+
+        &:first-child {
+            display: none;
+        }
+    }
+}
+
+.c-form__submit {
+}
+
+.c-file-upload__label {
+    font-size: 1.9rem;
+    line-height: 1.21;
+    letter-spacing: 0.58px;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.c-file-upload {
+    color: $color-primary;
+    position: relative;
+    font-size: 1.9rem;
+    line-height: 1.21;
+    letter-spacing: 0.58px;
+    display: inline-block;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        background-color: $color-primary;
+        width: 100%;
+    }
+}
+
+.dz-preview {
+    display: none;
+}
+
+.c-form-grey {
+    @include placeholder($color: #979797);
+
+    text-align: center;
+
+    fieldset {
+        margin-top: 2.5rem;
+        border: none;
+        padding: 0;
+
+        legend {
+            font-size: 2.4rem;
+            display: block;
+            text-align: left;
+
+            &:after {
+                content: '';
+                display: block;
+                height: 2px;
+                background-color: transparent;
+                width: 4rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media(min-width: $screen-md) {
+            margin-top: 5rem;
+
+            legend {
+                &:after {
+                    background-color: $color-yellow;
+                }
+            }
+        }
+    }
+}
+
+.c-form-grey--login {
+    .o-button-plain--white {
+        @media(max-width: $screen-md) {
+            border-color: $color-green;
+            color: $color-green;
+        }
+    }
+}
+
+.c-form-grey--light {
+    color: $color-secondary;
+
+    .c-form-grey__title {
+        font-weight: 400;
+
+        span {
+            color: $color-primary;
+        }
+    }
+
+    .c-form-grey__control {
+        background-color: $color-secondary;
+    }
+
+    .c-form-grey__button {
+        @media(max-width: $screen-md) {
+            min-width: 23rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.c-form-grey--password-reset {
+    .c-form-grey__button {
+        font-size: 1.7rem;
+        
+        @media(min-width: $screen-md) {
+            min-width: 17.6rem;
+            font-size: 1.5rem;
+        }
+
+        @media(max-width: 330px) {
+            min-width: 13rem;
+        }
+    }
+}
+
+.c-form-grey__group {
+    margin-bottom: 1rem;
+}
+
+.c-form-grey__group--password--max-width {
+    max-width: 43.4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.c-form-grey__group--street {
+    display: flex;
+
+    .c-form-grey__control:first-child {
+        width: 75%;
+    }
+
+    .c-form-grey__control:last-child {
+        margin-left: 1%;
+        width: 24%;
+    }
+}
+
+.c-form-grey__group--city {
+    display: flex;
+
+    .c-form-grey__control:first-child {
+        width: 33%;
+    }
+    
+    .c-form-grey__control:last-child {
+        margin-left: 1%;
+        width: 69%;
+    }
+}
+
+.c-form-grey__group--login, .c-form-grey__group--password {
+    position: relative;
+
+    .c-form-grey__control {
+        padding-left: 5.5rem;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 1.8rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.c-form-grey__group--login {
+    &:before {
+        @extend .svg-login;
+        @extend .svg-login-dims;
+    }
+}
+
+.c-form-grey__group--password {
+    &:before {
+        @extend .svg-password;
+        @extend .svg-password-dims;  
+    }
+}
+
+.c-form-grey__control {
+    background-color: #f0f4f2;
+    height: 38px;
+    width: 100%;
+    padding: 4px 2rem 0 2rem;
+    border: 1px solid #f0f4f2;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    letter-spacing: 0.16px;
+    color: #000;
+
+    &.error {
+        border-color: red;
+    }
+    
+    &:focus, &:active {
+        outline: none;
+    }
+    
+    @media(min-width: $screen-md) {
+        height: 52px;
+    }
+}
+
+.c-form-grey__control--password-reset {
+    @media(min-width: $screen-md) {
+        max-width: 43.4rem;
+    }
+}
+
+.c-form-grey__submit {
+    margin-top: 3.2rem;
+}
+
+.c-form-grey__submit--wide {
+    @media(min-width: $screen-md) {
+        min-width: 25.2rem;
+    }
+}
+
+.c-form-grey__button {
+    @media(min-width: $screen-md) {
+        margin-left: .75rem;
+        margin-right: .75rem;
+    }
+}
+
+.c-form-grey__button--mobile {
+    @media(min-width: $screen-md) {
+        display: none;
+    }
+}
+
+.c-form-grey__button--desktop {
+    display: none;
+
+    @media(min-width: $screen-md) {
+        display: inline-block;
+    }
+}
+
+.c-form-grey__reset-password {
+    font-size: 1.4rem;
+    line-height: 1.64;
+    letter-spacing: 0.13px;
+    color: #979797;
+    display: block;
+    transition: .3s all;
+
+    &:hover {
+        color: $color-green;
+    }
+}
+
+.c-form-grey__title--inline {
+    span {
+        display: inline;
+    }
+}
+
+.c-form-grey__text {
+    max-width: 41.4rem;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 3.2rem;
+    
+    p {
+        color: #979797;
+        font-size: 1.4rem;
+        line-height: 1.64;
+        letter-spacing: 0.26px;
+    }
+}

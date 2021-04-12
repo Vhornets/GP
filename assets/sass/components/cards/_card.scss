@@ -1,0 +1,126 @@
+.c-card {
+    padding: 1.5rem;
+    color: $color-primary;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;    
+    position: relative;
+    transition: .3s all;
+    margin-bottom: 1rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0b322a;
+        transition: .3s all;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    &:hover {
+        color: #fff;
+
+        .c-card__image {
+            opacity: 1;
+        }
+
+        &:before {
+            opacity: 0.5;
+        }
+
+        .c-card__more {
+            color: #fff;
+        }
+    }
+
+    @media(min-width: $screen-sm) {
+        padding: 2rem 3.7rem 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.c-card--featured {
+    padding: 0;
+    align-items: center;
+    margin-bottom: 0;
+
+    &:before {
+        display: none;
+    }
+
+    .c-card__more {
+        display: none;
+    }
+
+    .c-card__title {
+        width: 37%;
+        order: -1;
+    }
+
+    .c-card__image {
+        width: 60%;
+        height: 20rem;
+        margin-left: auto;
+        opacity: 1;
+        position: static;
+
+        @media(min-width: $screen-sm) {
+            height: 30rem;
+        }
+    }
+
+    &:hover {
+        color: $color-primary;
+    }
+}
+
+.c-card__date, .c-card__title, .c-card__more {
+    position: relative;
+    z-index: 2;
+}
+
+.c-card__date {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: .04rem;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    width: 100%;
+}
+
+.c-card__title {
+    font-size: 2.0rem;
+    font-weight: 500;
+    letter-spacing: .061rem;
+    margin-bottom: 1rem;
+    min-height: 5rem;
+    width: 100%;
+}
+
+.c-card__more {
+    @extend .o-button-default;
+    @extend .o-button-default--has-arrow-green;
+
+    // border: none;
+    margin-left: auto;
+    width: auto;
+    color: #7c7c7c;
+    transition: .3s all;
+}
+
+.c-card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .3s all;
+    z-index: 0;
+    object-fit: cover;
+}

@@ -1,0 +1,161 @@
+.c-account-nav__section {
+    margin-bottom: 4rem;
+}
+
+.c-account-nav__title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.c-account-nav {
+    @include list-reset;
+
+    li {
+        display: block;
+        
+        a {
+            text-decoration: none;
+            color: $color-secondary;
+            font-size: 1.2rem;
+            letter-spacing: 0px;
+            margin-bottom: 2rem;     
+            font-weight: 300;       
+            display: block;
+
+            &:after { 
+                content: '';
+                display: block;
+                height: 2px;
+                width: 2.2rem;
+                background-color: $color-yellow;
+                transition: .3s all;
+                margin-top: .5rem;
+                opacity: 0;
+            }
+        }
+
+        &:hover, &.is-active {
+            a:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.c-account-contacts {
+    margin-top: 6rem;
+}
+
+.c-account-contacts__title {
+    @extend .c-account-nav__title;
+
+    margin-bottom: 2rem;
+}
+
+.c-account-contacts__item {
+    color: $color-secondary;
+    line-height: 1.67;
+    letter-spacing: 0px;    
+    font-size: 1.2rem;
+    font-weight: 300;
+    display: block;
+}
+
+.c-account-settings__title {
+    font-size: 2.0rem;
+    font-weight: 700;
+    letter-spacing: 0.38px;
+    margin-bottom: 3.2rem;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 6.7rem;
+        margin-top: .5rem;
+        height: 2px;
+        background-color: $color-yellow;
+    }
+}
+
+.c-account-settings__heading {
+    margin-bottom: 0;
+    line-height: 1.4;
+
+    span {
+        display: inline-block; 
+    }
+    
+    @media(min-width: $screen-md) {
+        padding-left: 3rem;
+    }
+}
+
+.c-account-settings__text {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.28px;
+    text-align: left;
+    
+
+    strong {
+        font-weight: 700;
+        display: block;
+    }
+}
+
+.c-account-settings__logo {
+    // display: flex;
+    border-radius: 11px;
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        align-self: center;
+        margin: auto;
+        display: block;
+    }
+
+    @media(min-width: $screen-md) {
+        padding: 3rem;
+        border: solid 1px fade_out(#707070, .8);
+    }
+}
+
+.c-account-settings__logo-upload {
+    margin-top: 1.5rem;
+}
+
+.c-account-invoices__more {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.28px;
+    text-align: center;
+    color: #979797;
+    cursor: pointer;
+
+    .icon, svg path {
+        transition: .3s all; 
+    }
+
+    span {
+        display: block;
+        line-height: 1;
+        transition: .3s all;
+    }
+
+    &:hover {
+        span {
+            color: #212020;
+        }
+
+        svg path {
+            fill: #212020;
+        }
+    }
+}

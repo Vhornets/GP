@@ -1,0 +1,31 @@
+.c-list-products {
+    @include list-reset;
+
+    margin-bottom: 3rem;
+
+    li {
+        a {
+            color: #4d4d4d;
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: .096rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1rem 0;
+            display: block;
+            transition: .3s all;
+
+            &:hover {
+                color: $color-green;
+            }
+
+            @media(min-width: $screen-md) {
+                padding: 2.1rem 0;
+            }
+        }
+    }
+
+    @media(min-width: $screen-md) {
+        text-align: right;
+    }
+}

@@ -1,0 +1,50 @@
+.l-quality-insurance {
+    @include container;
+    @include gutters;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.l-quality-insurance__icon , .l-quality-insurance__text {
+    width: 100%;
+}
+
+.l-quality-insurance__icon {
+    @media(min-width: $screen-sm) {
+        padding-top: 1.2rem;
+        width: percentage(1/12);
+    }
+}
+
+.l-quality-insurance__text {
+    @media(min-width: $screen-sm) {
+        width: percentage(10/12);
+
+        figure {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 128%;
+            height: auto;
+            object-fit: cover;
+            max-width: none;
+            margin-left: -14%;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .l-quality-insurance__text {
+        @media(min-width: $screen-sm) {
+            img {
+                margin-left: initial;
+                margin-right: -14%;
+            }
+        }
+    }
+}

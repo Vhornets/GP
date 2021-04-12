@@ -1,0 +1,193 @@
+.c-table {
+    border-radius: 10px;
+    background-color: rgba(216, 216, 216, 0.15);    
+    padding: 1.7rem 2rem 1.7rem 3rem;
+    margin-top: 4.4rem;
+
+    table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+
+        thead {
+            th {
+                font-weight: 700;
+                line-height: 1.4;
+                border-bottom: solid 2px #d8d8d8;
+            }
+        }
+
+        tbody {
+            td {
+                a {
+                    color: $color-green;
+                    font-weight: 400;
+                    text-decoration: none;
+                    display: inline-block;
+                    position: relative;
+                    bottom: .6rem;
+                    transition: .3s all;
+
+                    .icon, svg {
+                        margin-right: .2rem;
+                        position: relative;
+                        top: .6rem;
+
+                        path {
+                            transition: .3s all;
+                        }
+                    }
+
+                    &:hover {
+                        color: #979797;
+
+                        svg path {
+                            fill: #979797;
+                        }
+                    }
+                }
+            }
+        }
+
+        th, td {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: 0.28px;
+            padding: 1.5rem 0;
+
+            &:first-child {
+                text-align: left;
+            }
+            
+        }
+
+        tr {
+            border-bottom: solid 2px #d8d8d8;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media(max-width: $screen-md) {
+            th, td {
+                padding: .7rem .5rem .4rem;
+
+                a {
+                    bottom: 0.2rem !important;
+
+                    svg {
+                        width: 1.3rem;
+                        height: 1.6rem;
+                        top: 0.3rem !important;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 330px) {
+            svg {
+                display: none;
+            }
+        }
+    }
+
+    // @media(max-width: $screen-md) {
+    //     background-color: transparent;
+    //     padding-left: 0;
+    //     padding-right: 0;
+    //     position: relative;
+
+    //     &:before {
+    //         content: '';
+    //         display: block;
+    //         position: absolute;
+    //         top: 0;
+    //         left: -15%;
+    //         width: 130%;
+    //         height: 100%;
+    //         background-color: rgba(216, 216, 216, 0.15);
+    //     }        
+    // }
+}
+
+.c-table--invoices {
+    table {
+        @media(max-width: $screen-md) {
+            th, td {
+                &:nth-child(3), &:nth-child(5), &:nth-child(6) {
+                    display: none;
+                }
+
+                &:first-child, &:last-child {
+                    width: 37%;
+                }
+            }
+        }        
+    }
+}
+
+.c-table--order-content {
+    // @media(max-width: $screen-sm) {
+    //     width: 115%;
+    //     margin-left: -7%;
+    // }
+
+    table {
+        tbody {
+            td {
+                a {
+                    bottom: 0;
+                }
+            }
+        }
+
+        @media(max-width: $screen-md) {
+            th, td {
+                &:nth-child(3), &:nth-child(4) {
+                    display: none;
+                }
+
+                &:first-child {
+                    width: 37%;
+                }
+            }
+        }        
+    } 
+}
+
+.c-table--white {
+    background-color: $color-secondary;
+    padding: .1rem 2rem 1rem 2rem;
+    margin-top: 2.3rem;
+    
+    table {
+        text-align: left;
+
+        th:last-child, td:last-child {
+            text-align: right;
+        }
+
+        td:first-child {
+            color: $color-green;
+            font-weight: 400;
+        }
+    }
+}
+
+.c-table__title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.38px;
+    margin-bottom: 1rem; 
+
+    &:after {
+        content: '';
+        display: block;
+        width: 6.7rem;
+        margin-top: .5rem;
+        height: 2px;
+        background-color: $color-yellow;
+    }
+}

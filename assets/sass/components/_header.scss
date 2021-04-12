@@ -1,0 +1,111 @@
+.c-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding-top: 2.5rem;
+    padding-bottom: 5.5rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: .3s all;
+        background-image: linear-gradient(to bottom, #ffffff, #ffffff 53%, rgba(255, 255, 255, 0.76) 70%, rgba(255, 255, 255, 0));
+    }
+
+    &.is-light {
+        &:before {
+            opacity: 1;
+        }
+
+        .c-main-menu {
+            & > li {
+                & > a {
+                    color: #000;
+                }
+            }
+        }
+
+        .c-language-switcher {
+            li:not(.current-lang) {
+                a {
+                    color: #979797;
+                }
+            }
+
+            li:after {
+                color: #979797;
+            }
+        }
+
+        .c-socials {
+            svg {
+                path {
+                    fill: #000;
+                }
+            }
+        }
+
+        .c-main-menu__toggle {
+            span {
+                background-color: #000;
+            }
+        }
+    }
+} 
+
+.c-header__logo {
+    transition: .3s all;
+}
+
+@media(max-width: $menu-collapse-breakpoint) {
+    .page-template-account-login, 
+    .page-template-account-register, 
+    .page-template-account-password-reset, 
+    .page-template-account-invoices, 
+    .page-template-account-orders, 
+    .page-template-account-edit, 
+    .page-template-account-settings {
+        .c-header {
+            padding-bottom: 1.5rem;
+            background-color: $color-secondary;
+
+            .c-main-menu__toggle {
+                border-radius: 10px;
+                width: 38px;
+                height: 35px;
+                background-color: $color-green;
+
+                span {
+                    background-color: $color-secondary;
+                    float: none;
+                }
+            }
+
+        }
+
+        &.menu-opened {
+            .c-main-menu__toggle {
+                span:nth-child(1) {
+                    left: 4px;
+                    top: -5px;                    
+                }
+
+                span:nth-child(3) {
+                    top: 7px;
+                    left: 4px;
+                }
+            }
+
+            .c-header {
+                background-color: transparent;
+            }
+        }
+    }
+}

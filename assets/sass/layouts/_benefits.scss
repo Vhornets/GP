@@ -1,0 +1,27 @@
+.l-benefits {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 3rem;
+    
+    &:after {
+        content: '';
+        flex: auto;
+    }
+}
+
+.l-benefits__column {
+    @include gutters;
+
+    width: 100%;
+
+    @media(min-width: $screen-xs) {
+        width: 50%;
+    }
+}

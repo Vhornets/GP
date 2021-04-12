@@ -1,0 +1,57 @@
+.c-card-vacancy {
+    display: flex;
+    height: 27rem;
+    padding: 2rem;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: solid 3px #ffffff;
+    color: #979797;
+    position: relative;
+
+    &:before {
+        @include absolute-center;
+
+        content: '';
+        display: block;
+        width: 0;
+        height: 90%;
+        top: 0;
+        opacity: 0.35;
+        background-color: #02a959;
+        z-index: -1;
+        transition: .3s all cubic-bezier(.645, .045, .355, 0.5);;
+    }
+
+    &:hover {
+        &:before {
+            width: 90%;
+        }
+
+        .c-card-vacancy__title {
+            color: #fff;
+        }
+
+        .c-card-vacancy__button {
+            opacity: 0;
+        }
+    }
+}
+
+.c-card-vacancy__title {
+    font-size: 2.3rem;
+    font-weight: 600;
+    letter-spacing: .071rem;
+    align-self: center;
+    width: 100%;
+    transition: .3s all;
+}
+
+.c-card-vacancy__button {
+    align-self: flex-end;
+    color: #979797;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    transition: .3s all;
+}

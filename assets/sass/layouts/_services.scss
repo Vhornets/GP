@@ -1,0 +1,31 @@
+.l-services {
+    @include container;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.l-services__text, .l-services__slider {
+    @include gutters;
+
+    width: 100%;
+}
+
+.l-services__text {
+    @media(min-width: $screen-md) {
+        width: percentage(4/12);
+    }
+}
+
+.l-services__slider {
+    @media(min-width: $screen-md) {
+        width: percentage(8/12);
+    }
+}
+
+.l-products__column--has-children-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

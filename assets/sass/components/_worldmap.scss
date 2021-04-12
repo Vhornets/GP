@@ -1,0 +1,61 @@
+.c-worldmap {
+    position: relative;
+    width: 120%;
+    margin-left: -10%;
+
+    svg {
+        path {
+            transition: .3s all;
+            cursor: pointer;
+        }
+
+        @media(min-width: $screen-md) {
+            position: relative;
+            top: -3rem;
+
+            path {
+                stroke: #FFFFFF;
+                fill: #9E9E9E;
+            }
+        }
+
+        @media(min-width: $screen-xl) {
+            width: 114%;
+            height: auto;
+            margin-left: -7%;
+        }
+    }
+
+    @media(min-width: $screen-md) {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.c-worldmap__popup {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    background-image: linear-gradient(to left, #2fa552 41%, rgba(24, 152, 44, 0.58) 95%);
+    padding: 1.5rem 4rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.38;
+    letter-spacing: .049rem;
+    transition: 0.3s all;
+    opacity: 0;
+
+    &.is-active {
+        opacity: 1;
+    }
+
+    @media(min-width: $screen-xxl) {
+        top: 3rem;
+    }
+}
+
+.c-worldmap__mobile {
+    @media(min-width: $screen-md) {
+        display: none;
+    }
+}

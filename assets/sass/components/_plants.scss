@@ -1,0 +1,65 @@
+.c-plants {
+
+}
+
+.c-plants__title {
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    margin-top: 0;
+    border-bottom: 1px solid $color-yellow;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+
+    &:after {
+        top: 100%;
+        right: 0;
+        height: 19rem;
+        width: 1px;
+        background-color: $color-yellow;
+    }
+
+    &:before {
+        top: calc(100% + 19rem);
+        right: -4px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $color-yellow;
+    }
+
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        display: none;
+
+        @media(min-width: $screen-sm) {
+            display: block;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .c-plants__title {
+        &:after {
+            right: initial;
+            left: 0;
+        }
+
+        &:before {
+            right: initial;
+            left: -4px;
+        }
+    }
+}
+
+.c-plants__text {
+    font-weight: 300;
+
+    p:first-child {
+        margin-top: 0;
+    }
+    
+    @media(min-width: $screen-sm) {
+        max-width: 26rem;
+    }
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__Component_10_2" width="35.591" height="35.582" data-name="Component 10 – 2" viewBox="0 0 35.591 35.582">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="prefix__Group_95" data-name="Group 95">
+        <g id="prefix__Group_94" data-name="Group 94">
+            <path id="prefix__Path_206" d="M733.154 565.472a3.107 3.107 0 0 0-1.083-2.135l-3.079-2.639v-7.5a1.042 1.042 0 0 0-1.043-1.042h-4.171a1.031 1.031 0 0 0-1.028 1.042v2.136l-5.277-4.5a3.112 3.112 0 0 0-4.067 0l-14.74 12.5a3.126 3.126 0 0 0-.338 4.412 3.159 3.159 0 0 0 3.43.911v15.96a1.032 1.032 0 0 0 1.03 1.043h25.162a1.043 1.043 0 0 0 1.043-1.043v-15.956a3.128 3.128 0 0 0 4.162-3.189zm-8.332-11.229h2.1v4.668l-2.1-1.787zm-5.2 29.334h-8.494v-8.355h8.494zm7.3 0h-5.227v-9.383a1.042 1.042 0 0 0-1.043-1.043h-10.566a1.03 1.03 0 0 0-1.028 1.043v9.383h-5.228V567.16l11.6-9.844 11.487 9.834v16.426zm3.906-17.186a1.042 1.042 0 0 1-1.471.113l-13.241-11.349a1.043 1.043 0 0 0-1.353 0L701.382 566.5a1.043 1.043 0 0 1-1.362-1.579l14.739-12.5a1.04 1.04 0 0 1 1.358 0l14.6 12.5a1.045 1.045 0 0 1 .111 1.47z" class="prefix__cls-1" data-name="Path 206" transform="translate(-697.573 -550.081)"/>
+        </g>
+    </g>
+    <g id="prefix__Group_97" data-name="Group 97" transform="translate(13.57 12.504)">
+        <g id="prefix__Group_96" data-name="Group 96">
+            <path id="prefix__Path_207" d="M717.214 561.338h-6.4a1.031 1.031 0 0 0-1.029 1.043v6.256a1.032 1.032 0 0 0 1.029 1.043h6.4a1.043 1.043 0 0 0 1.042-1.043v-6.256a1.041 1.041 0 0 0-1.042-1.043zm-1.029 6.255h-4.324v-4.171h4.324z" class="prefix__cls-1" data-name="Path 207" transform="translate(-709.79 -561.338)"/>
+        </g>
+    </g>
+    <g id="prefix__Group_99" data-name="Group 99" transform="translate(17.865 27.24)">
+        <g id="prefix__Group_98" data-name="Group 98">
+            <circle id="prefix__Ellipse_5" cx="1.043" cy="1.043" r="1.043" class="prefix__cls-1" data-name="Ellipse 5"/>
+        </g>
+    </g>
+</svg>

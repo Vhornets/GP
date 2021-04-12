@@ -1,0 +1,246 @@
+:root {
+    --scrollbar-width: 0px;
+
+    font-size: 55%;
+
+    @media(min-width: $screen-lg) {
+        font-size: 62.5%;
+    }
+
+    @media(min-width: $screen-xxxl) {
+        font-size: 75%;
+    }
+
+    @media(min-width: 2500px) {
+        font-size: 90%;
+    }
+}
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font-family-main;
+    font-weight: normal;
+    color: $color-primary;
+    font-size: 1.6rem;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #fff;
+
+    &.menu-opened {
+        overflow: hidden;
+
+        .c-header__logo {
+            opacity: 0;
+        }
+
+        .c-header:before {
+            opacity: 0;
+        }
+
+        .c-main-menu__toggle {
+            span {
+                background-color: #fff !important;
+
+                &:nth-child(1) {
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                    top: 5px;
+                }
+            }
+        }
+    }    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+button, input[type="submit"] {
+    cursor: pointer;
+    font-family: $font-family-main;
+
+    &[disabled] {
+        cursor: default;
+    }
+}
+
+input, textarea, select {
+    font-family: $font-family-main;
+}
+
+a { 
+    text-decoration: none;
+    // color: $color-orange;
+}
+
+h1, .h1 {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+
+    @media(min-width: $screen-md) {
+        font-size: 6.0rem;
+        margin-bottom: 2.5rem;
+        margin-top: 2.5rem;
+    }
+}
+
+h2, .h2 {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 100%;
+    margin-bottom: 30px;
+
+    span {
+        font-weight: normal;
+        font-size: 24px;
+        color: #68637E;
+        margin-left: 25px;
+    }
+
+    @media(min-width: $screen-lg) {
+        font-size: 38px;
+        line-height: 51px;
+    }
+}
+
+h3, .h3 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    span {
+        color: #949494;
+    }
+
+    @media(min-width: $screen-md) {
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+    }
+}
+
+h4, .h4 {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 100%;
+    margin-bottom: 30px;
+
+    @media(min-width: $screen-lg) {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+    }
+}
+
+h5, .h5 {
+
+}
+
+p {
+    letter-spacing: .1rem;
+    color: #7c7c7c;
+    line-height: 1.5;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+ul, ol {
+    padding-left: 1.4rem;
+
+    li {
+        margin-bottom: 2rem;
+
+        @media(min-width: $screen-md) {
+        }
+    }
+}
+
+.wysiwyg {
+    h1, h2, h3, h4, h5, h6, p {
+    }
+
+    a {
+
+    }
+
+    ul {
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media(min-width: $screen-md) {
+        img {
+            width: auto;
+            height: auto;
+            display: block;
+        }
+
+        .alignleft {
+            float: left;
+            margin-right: 30px;
+        }
+
+        .alignright {
+            float: right;
+            margin-left: 30px;
+        }
+
+        .aligncenter {
+        }
+    }
+
+    .wp-block-embed {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .wp-block-embed__wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+
+        iframe, object, embed { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }        
+    }
+}

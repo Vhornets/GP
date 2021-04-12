@@ -1,0 +1,344 @@
+.l-account {
+    @include container;
+    @include gutters;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.l-account--wide {
+    // @media(min-width: 1310px) {
+    //     max-width: 140rem;
+    // }
+
+    @media(min-width: $screen-md) and (max-width: 1450px) {
+        max-width: none;
+        width: calc(100% + 10rem);
+        margin-left: -5rem;
+
+        .l-account__navigation, .l-account__invoices, .l-account__settings {
+            border-radius: 0;
+        }
+    }
+
+    @media(min-width: 1450px) {
+        max-width: 141rem;
+    }
+}
+
+.l-account__login, .l-account__card {
+    width: 100%;
+}
+
+.l-account__login {
+    border-radius: 32px;
+    padding: 0 1rem;
+    
+    @media(min-width: $screen-md) {
+        padding: 8.4rem 12.5rem;
+        background-color: #f9f9f9;
+        width: percentage(5/8);
+        margin-right: -5rem;
+    }
+}
+
+.l-account__login-content {
+    @media(min-width: $screen-md) {
+        padding-right: 5rem;
+    }
+}
+
+.l-account__card {
+    border-radius: 32px;
+    background-color: #18af68;
+    padding: 0 7rem;
+    text-align: center;
+    color: $color-secondary;
+    display: none;
+    position: relative;
+
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    @media(min-width: $screen-md) {
+        width: percentage(3/8);
+        margin-left: -5rem;
+        // background-image: url('../../img/account-weed.png');
+        display: flex;
+    }
+}
+
+.l-account__card-content {
+    align-self: center;
+    padding-top: 3rem;
+    position: relative;
+}
+
+.l-account__password-reset {
+    width: 100%;
+    border-radius: 32px;
+    padding: 0 1rem;
+    
+    @media(min-width: $screen-md) {
+        padding: 8.4rem 12.5rem;
+        background-color: #f9f9f9;
+        width: calc(100% - 5rem);
+    }
+}
+
+.l-account__register-card {
+    border-radius: 32px;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+    display: none;
+
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media(min-width: $screen-md) {
+        width: percentage(3/8);
+        margin-right: -5rem;
+        padding: 8.4rem .5rem;
+        display: flex;
+    }
+}
+
+.l-account__register-card-content {
+    width: 100%;
+
+    @media(min-width: $screen-md) {
+        padding-right: 5rem;
+    }
+}
+
+.l-account__register {
+    border-radius: 32px;
+    padding: 0 1rem;
+    position: relative;
+    
+    @media(min-width: $screen-md) {
+        padding: 8.4rem 13.6rem;
+        background-color: #18af68;
+        width: percentage(5/8);
+        margin-left: -5rem;
+
+        .s-account__weed {
+            right: 5rem;
+        }
+    }
+}
+
+.l-account__register-content {
+    position: relative;
+}
+
+.l-account__navigation {
+    width: 108%;
+    background-color: #18af68;
+    color: $color-secondary;
+    padding: 2rem 4rem 1.2rem;
+    position: relative;
+    display: flex;
+    order: 2;
+    margin-top: 2rem;
+
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media(max-width: $screen-md) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    @media(min-width: $screen-md) {
+        order: initial;
+        border-radius: 32px;
+        width: percentage(2/8);
+        margin-right: -5rem;
+        padding: 16rem 2rem 2.5rem 13.5rem;
+        margin-top: 0;
+        margin-left: initial;
+        
+        .s-account__weed {
+            width: 30.2rem;
+            height: auto;
+        }
+    }
+}
+
+.l-account__navigation-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #18af68;
+    text-align: center;
+    width: 100%;
+
+    span {
+        display: block;
+        margin-top: .5rem;
+    }
+
+    a {
+        color: $color-secondary;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 2.33;
+        letter-spacing: 0.17px;
+        color: #ffffff;
+    }
+
+    .icon, svg {
+
+    }
+
+    @media(min-width: $screen-md) {
+        display: none;
+    }
+}
+
+.l-account__navigation-content {
+    position: relative;
+    display: none;
+
+    @media(min-width: $screen-md) {
+        display: block;
+    }
+}
+
+.l-account__settings {
+    border-radius: 32px;
+    padding: 0 1rem;
+    background-color: #fff;
+    
+    @media(min-width: $screen-md) {
+        padding: 8.4rem 10rem 3.5rem 10rem;
+        width: percentage(6/8);
+        margin-left: -5rem;
+
+        .s-account__weed {
+            right: 5rem;
+        }
+    }
+}
+
+.l-account__settings-content {
+    @media(min-width: $screen-md) {
+        padding-left: 5rem;
+    }
+}
+
+.l-account-settings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-radius: 10px;
+
+    @media(min-width: $screen-md) {
+        background-color: rgba(216, 216, 216, 0.15);
+        padding: 1.6rem 2rem 6rem 3rem;
+    }
+}
+
+.l-account-settings__edit {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 3.3rem;
+
+    @media(max-width: $screen-md) {
+        text-align: center;
+        order: 5;
+        margin-top: 4rem;
+    }
+}
+
+.l-account-settings__column {
+    width: 100%;
+    margin-top: 5rem;
+
+    &:last-child {
+        @media(max-width: $screen-md) {
+            order: -1;
+
+            .c-account-settings__title {
+                display: none;
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        @media(max-width: $screen-md) {
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -10%;
+                left: -15%;
+                width: 130%;
+                height: 120%;
+                background-color: rgba(216, 216, 216, 0.15);
+            }
+        }
+    }
+
+    @media(min-width: $screen-md) {
+        margin-top: 0;
+        width: percentage(4/12);
+        padding-right: 7rem;
+    }
+}
+
+.l-account__invoices {
+    width: 100%;
+    border-radius: 32px;
+    background-color: #fff;
+    
+    @media(min-width: $screen-md) {
+        padding: 8.4rem 2rem 3.5rem 2rem;
+        width: percentage(6/8);
+        margin-left: -5rem;
+
+        .s-account__weed {
+            right: 5rem;
+        }
+    }
+}
+
+.l-account__invoices-content--orders.has-max-height {
+    max-height: 960px;
+    overflow: hidden;
+}
+
+.l-account__invoices-content--invoices.has-max-height {
+    max-height: 900px;
+    overflow: hidden;
+}
+
+.l-account__invoices-content, .l-account__invoices-more {
+    @media(min-width: $screen-md) {
+        padding-left: 5rem;
+    }
+}
+
+.l-account__invoices-content--orders {
+    @media(min-width: $screen-md) {
+        padding-left: 7rem;
+        padding-right: 10rem;
+    }
+}
+
+.l-account__invoices-more {
+    text-align: center;
+    margin-top: 2.5rem;
+}

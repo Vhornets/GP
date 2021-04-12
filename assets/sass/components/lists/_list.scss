@@ -1,0 +1,59 @@
+.c-list {
+    @include list-reset;
+
+    li {
+        display: block;
+        margin-top: 15px;
+        position: relative;
+        font-size: 0;
+
+        @media(min-width: $screen-lg) {
+            margin-top: 45px;
+        }
+    }
+}
+
+.c-list__icon, .c-list__text {
+    display: inline-block;
+    vertical-align: top;
+
+    @media(min-width: $screen-sm) {
+        vertical-align: middle;
+    }
+}
+
+.c-list__icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #EEF0F6;
+    position: relative;
+
+    .icon {
+        @include absolute-center;
+    }
+
+    @media(min-width: $screen-sm) {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.c-list__text {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    margin-left: 15px;
+    max-width: 240px;
+
+    @media(min-width: $screen-sm) {
+        max-width: 350px;
+        margin-left: 25px;
+    }
+
+    @media(min-width: $screen-lg) {
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 500px;
+    }
+}

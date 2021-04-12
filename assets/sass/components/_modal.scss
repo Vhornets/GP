@@ -1,0 +1,45 @@
+.c-modal {
+
+}
+
+.c-modal__content {
+    font-size: 2rem;
+    line-height: 1.4;
+
+    a {
+        color: $color-green;
+    }
+
+    #login {
+        width: auto;
+        padding-top: 0;
+
+        h1, br {
+            display: none;
+        }
+
+        input[type="submit"] {
+            @extend .o-button-plain;
+
+            min-width: 0;
+        }
+
+        p.submit {
+            display: inline-block;
+            margin-top: 2rem;
+
+            & + p {
+                display: none;
+            }
+
+            & + p + p{
+                // display: inline-block;
+                display: none;
+            }
+        }
+
+        #backtoblog {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.l-community {
+    @include container;
+    @include gutters;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.l-community__content {
+    width: 100%;
+    margin-left: auto;
+
+    @media(min-width: $screen-lg) {
+        width: percentage(11/12);
+    }
+}
+
+.l-community-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.l-community-columns__item {
+    width: 100%;
+
+    @media(min-width: $screen-sm) {
+        width: percentage(3/12);
+    }
+}

@@ -1,0 +1,57 @@
+.l-pet-food {
+    @include container;
+    @include gutters;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.l-pet-food__head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4.5rem;
+}
+
+.l-pet-food__icon {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    svg, img {
+        width: 7rem;
+        height: auto;
+
+        path {
+            fill: #fff;
+        }
+    }
+
+    @media(min-width: $screen-lg) {
+        width: percentage(1/12);
+        padding-top: 1rem;
+        margin-bottom: 0;
+    }
+}
+
+.l-pet-food__title {
+    width: 100%;
+
+    margin-bottom: 5rem;
+
+    .o-title {
+        color: #fff;
+    }
+
+    @media(min-width: $screen-lg) {
+        padding-left: .5rem;
+        width: percentage(11/12);
+    }
+}
+
+.l-pet-food__text {
+    width: 100%;
+    
+    @media(min-width: $screen-md) {
+        width: percentage(8.3/12);
+    }
+}

@@ -1,0 +1,30 @@
+.c-community__column-text {
+    margin-bottom: 3rem;
+
+    p {
+        font-weight: 300;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    h5 {
+        font-weight: 500;
+        font-size: 1.6rem;
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &:after {
+            content: '';
+            width: 10rem;
+            height: 1px;
+            background-color: #fff;
+            display: block;
+            margin-top: 1.5rem;
+        }
+    } 
+
+    @media(min-width: $screen-sm) {
+        margin-bottom: 7rem;
+    }
+}
